@@ -1,5 +1,5 @@
 import React from "react";
-import { StInput } from "./InputCss";
+import { styled } from "styled-components";
 
 function Input({ title1, title2, setTitle }) {
   const onChange = (event) => {
@@ -24,3 +24,19 @@ function Input({ title1, title2, setTitle }) {
 }
 
 export default Input;
+
+// styled-components --------------------------------------------------------
+
+// input 태그 css
+const StInput = styled.input`
+  height: 40px;
+  width: 200px;
+
+  border-radius: 8px;
+  border: 1px solid;
+
+  font-size: 15px;
+  text-indent: 7px;
+
+  outline-color: #55efc4;
+`;

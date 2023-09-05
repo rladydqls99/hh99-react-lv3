@@ -1,7 +1,7 @@
 import React from "react";
-import Button from "./Button";
+import Button from "./button/Button";
 
-function Buttons() {
+function ButtonWrapper() {
   return (
     <div>
       <h1>Button</h1>
@@ -13,4 +13,4 @@ function Buttons() {
   );
 }
 
-export default Buttons;
+export default ButtonWrapper;

@@ -1,16 +1,15 @@
-import "./App.css";
-import Buttons from "./components/Buttons/Buttons";
-import Inputs from "./components/Inputs/Inputs";
-import Modal from "./components/Modal";
-import Select from "./components/Select";
+import ButtonWrapper from "./components/ButtonWrapper";
+import InputWrapper from "./components/InputWrapper";
+import ModalWrapper from "./components/ModalWrapper";
+import SelectWrapper from "./components/SelectWrapper";
 
 function App() {
   return (
     <>
-      <Buttons />
-      <Inputs title="name" />
-      <Modal />
-      <Select />
+      <ButtonWrapper />
+      <InputWrapper title="name" />
+      <ModalWrapper />
+      <SelectWrapper />
     </>
   );
 }
