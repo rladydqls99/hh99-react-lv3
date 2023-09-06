@@ -26,7 +26,7 @@ const OptionsList = styled.ul`
   padding: 0px 30px 0px 30px;
 
   li {
-    padding: 10px;
+    padding: 8px;
 
     cursor: pointer;
     &:hover {

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { styled } from "styled-components";
 import Select from "./select/Select";
 import Select2 from "./select/Select2";
@@ -30,11 +30,12 @@ function SelectWrapper() {
     <StSelectDiv>
       <h1>Select</h1>
       <DropdownContainer>
-        <SelectedOption onClick={toggleDropdown}>
+        {/* <SelectedOption onClick={toggleDropdown}>
           {selectedOption}
           <p>👇</p>
           {isOpen && <Select handleOptionClick={handleOptionClick} />}
-        </SelectedOption>
+        </SelectedOption> */}
+        <Select />
 
         <SelectedOption2 onClick={toggleDropdown2}>
           {selectedOption2}
@@ -57,12 +58,11 @@ const StSelectDiv = styled.div`
 
 const DropdownContainer = styled.div`
   display: flex;
-  gap: 10px;
 `;
 
 const SelectedOption = styled.div`
   cursor: pointer;
-  position: relative;
+  position: absolute;
   flex-direction: row;
   justify-content: center;
   display: flex;
@@ -76,11 +76,13 @@ const SelectedOption = styled.div`
   height: 40px;
   border: 2px solid #ddd;
   border-radius: 10px;
+  z-index: 100;
 `;
 
 const SelectedOption2 = styled.div`
   cursor: pointer;
   position: relative;
+  left: 27%;
   flex-direction: row;
   justify-content: center;
   display: flex;
