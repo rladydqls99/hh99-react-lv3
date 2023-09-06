@@ -22,6 +22,7 @@ const StSelectDiv = styled.div`
   height: 200px;
   overflow: hidden;
   margin-top: 50px;
+  min-width: 2000px;
 `;
 
 const SelectContainer = styled.div`

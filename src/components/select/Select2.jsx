@@ -33,7 +33,7 @@ export default Select2;
 const SelectedOption2 = styled.div`
   cursor: pointer;
   position: relative;
-  left: 27%;
+  left: 20%;
   flex-direction: row;
   justify-content: center;
   display: flex;

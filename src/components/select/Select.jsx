@@ -46,6 +46,7 @@ const SelectedOption = styled.div`
   margin-left: 10px;
   justify-content: space-between;
 
+  min-width: 150px;
   width: 300px;
   height: 40px;
   border: 2px solid #ddd;
