@@ -5,6 +5,7 @@ import { useState } from "react";
 function Select() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("자바");
+
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
@@ -12,6 +13,7 @@ function Select() {
     setSelectedOption(option);
     setIsOpen(false);
   };
+
   return (
     <SelectedOption onClick={toggleDropdown}>
       {selectedOption}
@@ -31,6 +33,24 @@ function Select() {
 }
 
 export default Select;
+
+const SelectedOption = styled.div`
+  cursor: pointer;
+  position: absolute;
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  padding: 0px 30px 0px 30px;
+  margin-left: 10px;
+  justify-content: space-between;
+
+  width: 300px;
+  height: 40px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+`;
 
 const OptionsList = styled.ul`
   position: absolute;
@@ -53,22 +73,4 @@ const OptionsList = styled.ul`
       background-color: #efefef;
     }
   }
-`;
-
-const SelectedOption = styled.div`
-  cursor: pointer;
-  position: absolute;
-  flex-direction: row;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-
-  padding: 0px 30px 0px 30px;
-  margin-left: 10px;
-  justify-content: space-between;
-
-  width: 300px;
-  height: 40px;
-  border: 2px solid #ddd;
-  border-radius: 10px;
 `;

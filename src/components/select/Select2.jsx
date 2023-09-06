@@ -1,16 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import { styled } from "styled-components";
 
-function Select2({ handleOptionClick2 }) {
+function Select2() {
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [selectedOption2, setSelectedOption2] = useState("리액트");
+
+  const toggleDropdown2 = () => {
+    setIsOpen2(!isOpen2);
+  };
+
+  const handleOptionClick2 = (option) => {
+    setSelectedOption2(option);
+    setIsOpen2(false);
+  };
+
   return (
-    <OptionsList>
-      <li onClick={() => handleOptionClick2("자바")}>자바</li>
-      <li onClick={() => handleOptionClick2("리액트")}>리액트</li>
-    </OptionsList>
+    <SelectedOption2 onClick={toggleDropdown2}>
+      {selectedOption2}
+      <p>👇</p>
+      {isOpen2 && (
+        <OptionsList>
+          <li onClick={() => handleOptionClick2("자바")}>자바</li>
+          <li onClick={() => handleOptionClick2("리액트")}>리액트</li>
+        </OptionsList>
+      )}
+    </SelectedOption2>
   );
 }
 
 export default Select2;
+
+const SelectedOption2 = styled.div`
+  cursor: pointer;
+  position: relative;
+  left: 27%;
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  padding: 0px 30px 0px 30px;
+  margin-left: 10px;
+  justify-content: space-between;
+
+  width: 300px;
+  height: 40px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+`;
 
 const OptionsList = styled.ul`
   position: absolute;
