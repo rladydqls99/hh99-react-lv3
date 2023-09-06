@@ -1,20 +1,16 @@
 import React from "react";
 import { styled } from "styled-components";
 
-function Select({ handleOptionClick }) {
+function Select2({ handleOptionClick2 }) {
   return (
     <OptionsList>
-      <li onClick={() => handleOptionClick("자바")}>자바</li>
-      <li onClick={() => handleOptionClick("리액트")}>리액트</li>
-      <li onClick={() => handleOptionClick("리액트 네이티브")}>
-        리액트 네이티브
-      </li>
-      <li onClick={() => handleOptionClick("스프링")}>스프링</li>
+      <li onClick={() => handleOptionClick2("자바")}>자바</li>
+      <li onClick={() => handleOptionClick2("리액트")}>리액트</li>
     </OptionsList>
   );
 }
 
-export default Select;
+export default Select2;
 
 const OptionsList = styled.ul`
   position: absolute;
